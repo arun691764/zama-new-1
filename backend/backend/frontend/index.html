@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Encrypted Polling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Encrypted Polling (1 Person = 1 Vote)</h1>
+
+<div class="card">
+  <h2>Step 1: Enter Email / Phone</h2>
+  <input id="identifier" placeholder="your email or phone">
+  <button onclick="requestOTP()">Request OTP</button>
+  <p id="otpMsg"></p>
+</div>
+
+<div class="card">
+  <h2>Step 2: Enter OTP</h2>
+  <input id="otp" placeholder="OTP">
+  <button onclick="verifyOTP()">Verify</button>
+  <p id="verifyMsg"></p>
+</div>
+
+<div class="card">
+  <h2>Step 3: Vote</h2>
+  <button onclick="vote('A')">Vote A</button>
+  <button onclick="vote('B')">Vote B</button>
+  <p id="voteMsg"></p>
+</div>
+
+<div class="card">
+  <h2>Admin View Results</h2>
+  <input id="adminkey" placeholder="admin-secret-demo">
+  <button onclick="getResults()">Get Results</button>
+  <pre id="resultBox"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
